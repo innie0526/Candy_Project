@@ -1,0 +1,272 @@
+javaScript
+-- Number, string, boolean, null, undefined
+
+- 1.number
+
+# NaN = Not a Namber
+0/0 => NaN
+1 + NaN => NaM
+> typeof NaN 
+< "number" : one of number family
+
+# Variables (변수)
+let someName = value;
+ex) let year = 1985;
+> year
+< 1985
+
+ex)
+let a = 5;
+let b = 1;
+> a+b
+< 6
+let c = a + b;
+> c
+< 6
+
+/* a를 재지정하고 싶다면 
+a = 2 ;  
+or 
+> a = a + 1;
+< 2
+로 출력됨. but c = 3 (변하지x)  
+> c = a + b (라고 다시 적어줘야함)
+< 3  */ 
+
+let score = 0;
+> score = score + 5 ;
+< 5 
+> score += 10; /*축약형*/
+< 15
+
+> score -= 5 ;
+< 10
+
+*= , /= 
+
+let a = 9;
+> a --; /* 바뀌기 전의 값 출력*/
+< 9 
+
+> a
+< 8
+
+> a --;
+< 8
+
+> a 
+< 7
+
+> a ++;
+< 7
+
+> a
+< 8
+
+let const(constant 상수) var 
+
+#const
+
+const a = 1;
+> a
+< 1
+ 
+> a += 1; 
+< TypeError  
+
+> a = 2;
+< TypeError
+
+> a 
+< 1 
+
+# var => old version (let 과 비슷)
+
+-2. booleans
+true or flase
+
+# let,const naming
+공백x, 숫자로 시작 불가능, _로 시작 가능(일반적x) , helloWorld(camel case), current_date => currentDate , meaning name
+
+-3. string
+let userName = "danny"
+
+> ""
+< "" => empty string
+
+> "I told her 'go away'"
+< "I told her 'go away'" 
+
+# strings are indexed
+CHICKEN
+0123456
+/* 0부터 시작 */
+
+let food = "Fried Chicken"
+
+> food
+< "Fried chicken"
+
+> food[0]
+< "F" 
+
+> food[99]
+< undefined
+
+> food.length
+< 13
+
+> "lol".length
+< 3
+
+> "lol"[0]
+< 'l'
+
+> "lol" + "lol"
+< "lollol"  ==> concat
+
+let firstName = "Red"
+let lastName = "Apple"
+
+> firstName + lastName 
+< "RedApple"
+
+> firstName +""+lastName 
+< "Red Apple"
+
+let fullName = > firstName +""+lastName 
+
+> fullName
+< "Red Apple"
+
+> 1 + "hi"
+< "1hi" /* 1을 string(문자열)로 인식 */
+
+let result = 1 + "hi"
+
+> result
+< "1hi"
+
+> typeof result
+< "string"
+
+#string methods
+thing.method()
+
+> let msg = "give me money"
+< undefined
+
+> msg.toUpperCase()
+< 'GIVE ME MONEY'
+
+> let angryMsg = msg.toUpperCase()
+< undefined
+
+> angryMsg
+< 'GIVE ME MONEY'
+
+toUpperCase() <-> toLowerCase()
+
+.trim  => 좌우 공백 삭제 
+
+.methods 중복 사용 가능
+> let greeting = "  hello again~!      "
+< undefined
+> greeting
+< '  hello again~!      '
+> greeting.trim().toUpperCase()
+< 'HELLO AGAIN~!'
+
+# indexOf()
+-> 해당 지점의 첫번째 문자열을 숫자로 반환 (공백도 반환 가능)
+-> -1 /* not found */
+
+> "haha that is so funny".indexOf("h")
+< 0
+> "haha that is so funny".indexOf("b")
+< -1
+
+
+# str.slice( ) , str.slice(beginIdex [, endIndex])
+
+> "haha that is so funny".slice(5)
+< 'that is so funny'
+> "haha that is so funny".slice(5,9)
+< 'that'
+> "haha that is so funny".slice(-6)
+< ' funny'
+
+#replace( , ) , replaceAll( , )
+
+> let msg = "haha that is so funny"
+< undefined
+> msg.replace('h','H')
+< 'Haha that is so funny'
+> msg.replaceAll('h','H')
+< 'HaHa tHat is so funny'
+> msg.replace('haha', 'lolol')
+< 'lolol that is so funny'
+
+#.repeat()
+> "hi".repeat(3)
+< "hihihi"
+
+#.concat()
+
+#`` (백틱 back-ticks) <= Template Literals 
+
+let product = "apple"
+let price = 3
+let qty = 5
+
+> 'You bought ${qty} ${product}. Total is: $${price*qty}'
+< 'You bought ${qty} ${product}. Total is: $${price*qty}'
+
+> `You bought ${qty} ${product.toUpperCase()}. Total is: $${price*qty}`
+< 'You bought 5 APPLE. Total is: $15'
+
+- 4.null
+- 5.undefined
+
+ #math object
+ex) math.round()  => 반올림
+
+ > math.random()
+ < 0~1 사이의 값 반환
+ 
+ 
+ -- section16
+ boolean logic
+=> false or true 출력 / string 비교 가능( 'a'<'b' , 'a'>'A' ) / UniCode 비교 가능 /
+ # comparisons(비교연산자)
+ >  
+ <
+ >=   
+ <=    
+ ==    //equality
+ !=    // not equal 
+ ===
+ !==
+ 
+ 
+ console.log()  => ()안의 값 console창에 출력
+ alert()  => ()안의 값 pop up
+ prompt() 
+ 
+ let userInput = prompt("please enter a number")undefined
+
+> userInput
+< '5'        //string으로 인식 
+
+> userInput + 1  
+< '51'     // string concat
+
+> parseInt(userInput) + 1     // parseInt : srting -> number 변환
+< 6
+ 
+ let 변수 = ; 
+ 
+ if() {
+ } else if() {
+ } else {
+ }
